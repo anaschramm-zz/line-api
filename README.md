@@ -3,13 +3,31 @@
 Criação de uma API-RPC para o gerenciamento de uma fila de pessoas. O projeto foi feito em nodeJs e os dados foram salvos em um arquivo JSON.
 
 Esse projeto apresenta os seguintes endpoints:
-`/createUser` - Cadastra usuário;
-`/addToLine` - Coloca um usuário na última posição da fila;
-`/findPosition` - Retorna a posição de um usuário a partir de seu email;
-`/showLine` - Lista os usuários da fila e suas respectivas posições;
-`/filterLine` - Lista os usuários filtrados a partir do gênero;
-`/popLine` - Tira a pessoa na primeira posição da fila;
 
+`/createUser` - Cadastra usuário;</br>
+`/addToLine` - Coloca um usuário na última posição da fila;</br>
+`/findPosition` - Retorna a posição de um usuário a partir de seu email;</br>
+`/showLine` - Lista os usuários da fila e suas respectivas posições;</br>
+`/filterLine` - Lista os usuários filtrados a partir do gênero;</br>
+`/popLine` - Tira a pessoa na primeira posição da fila;</br>
+
+## Índice:
+1. Endpoints
+    1.1: Cadastrar usuário
+    1.2: Adicionar a fila
+    1.3: Buscar usuário na fila
+    1.4: Ver fila
+    1.5: Filtrar fila
+    1.6: Tirar da fila
+2. Observações
+    2.1 - Validações
+3. Pré-requisitos para rodar o projeto
+    3.1 Node
+4. Clonando o projeto
+5. Instalando o projeto
+6. Rodando o projeto
+7. Rodando os testes
+8. Documentação dos endpoints
 
 ## Endpoints:
 
