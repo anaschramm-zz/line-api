@@ -29,7 +29,7 @@ Tabela de conteúdos
    * [Documentação dos endpoints](#-Documentação-dos-endpoints)
 <!--te-->
 
-## ⚙️ Endpoints
+## Endpoints
 
 ### Cadastrar usuário
 
@@ -55,9 +55,7 @@ Esse metódo recebe um gênero de usuário e retornar uma lista de usuários com
 
 Esse metódo retira da fila a pessoa na primeira posição e retorna-la.
 
----
-
-## :pushpin: Observações
+## Observações
 
 ### Validações
 
@@ -67,10 +65,7 @@ Esse metódo retira da fila a pessoa na primeira posição e retorna-la.
 - Inserção de dois usuários iguais na fila (Verificação feita através do ID)
 - Testes unitários
 
----
-
-## 🚀 Pré-requisitos para rodar o projeto
-
+## Pré-requisitos para rodar o projeto
 
 Para rodar o projeto, você precisará ter o Node.js instalado na sua máquina.
 
@@ -81,10 +76,10 @@ Tenha certeza também que tem o `git` disponível no seu PATH, você também pod
 
 - #### Instalação do Node no Ubuntu
     Você pode instalar facilmente o nodejs e o npm com um apt install, basta seguir os seguintes comandos.
-    ```bash
+
         $ sudo apt install nodejs
         $ sudo apt install npm
-    ```
+
 - #### Outros sistemas operacionais
     Você pode achar mais informações sobre a instalação no site oficial do Node.js (https://nodejs.org/) e no site oficial do NPM.
 
