@@ -44,6 +44,7 @@ Esse metódo retira da fila a pessoa na primeira posição e retorna-la.
 - Inserção de email inválido (Sem a estrutura ana@email.algo)
 - Inserção de dois usuários iguais no cadastro (Verificação feita através do email)
 - Inserção de dois usuários iguais na fila (Verificação feita através do ID)
+- Não foi feita a validação do gênero para que a pessoa se sinta livre para se identificar como quiser ao inserir os dados.
 - Testes unitários
 
 ## Pré-requisitos para rodar o projeto
@@ -97,6 +98,7 @@ $ npm test
 
 ## Documentação dos endpoints
 
-Link para acessar o postman e documentação da collection.
+Link para acessar o postman:
 
-https://tinyurl.com/y4rqj2q8
+Documentação da collection:
+
