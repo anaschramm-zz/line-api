@@ -21,12 +21,12 @@ Tabela de conteúdos
 <!--ts-->
    * [Endpoints](#-Endpoints)
    * [Observações](#-Observações)
-   * [Pré-requisitos para rodar o projeto](#-Pré-requisitos para rodar o projeto)
-   * [Clonando o projeto](#-Clonando o projeto)
-   * [Instalando o projeto](#-Instalando o projeto)
-   * [Rodando o projeto](#-Rodando o projeto)
-   * [Rodando os testes](#-Rodando os testes)
-   * [Documentação dos endpoints](#-Documentação dos endpoints)
+   * [Pré-requisitos para rodar o projeto](#-Pré-requisitos-para-rodar-o-projeto)
+   * [Clonando o projeto](#-Clonando-o-projeto)
+   * [Instalando o projeto](#-Instalando-o-projeto)
+   * [Rodando o projeto](#-Rodando-o-projeto)
+   * [Rodando os testes](#-Rodando-os-testes)
+   * [Documentação dos endpoints](#-Documentação-dos-endpoints)
 <!--te-->
 
 ## ⚙️ Endpoints
@@ -90,42 +90,36 @@ Tenha certeza também que tem o `git` disponível no seu PATH, você também pod
 
 Para verificar que a instalação foi feita com sucesso, você pode seguir os seguintes comandos.
 
-   ```bash
 $ node --version
 v12.14.1
 
 $ npm --version
 6.13.4
-  ```
-  ---
+
 ## Clonando o projeto
 
 Para clonar o projeto, basta criar uma pasta no seu computador, acessá-la pelo terminal e utilizar o seguinte comando.
    ```bash
 $ git clone git@github.com:anaschramm/cubos-clinic-api.git
   ```
-  ---
 ## Instalando o projeto
 
 Para instalar o projeto na sua máquina, basta instalar todas as dependências presentes no arquivo `package.json` usando o seguinte comando no seu terminal.
   ```bash
 $ npm install
   ```
-  ---
 ## Rodando o projeto
 
 Para rodar o projeto, basta utilizar o seguinte comando.
   ```bash
 $ npm start
   ```
-  ---
 ## Rodando os testes
 
 Para rodar os testes, basta utilizar o seguinte comando.
  ```bash
 $ npm test
   ```
-  ---
 ## Documentação dos endpoints
 
 Link para acessar o postman:
