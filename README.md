@@ -17,13 +17,13 @@ Tabela de conteúdos
 =================
 <!--ts-->
    * [Endpoints](#Endpoints)
-   * [Observações](#-Observações)
-   * [Pré-requisitos para rodar o projeto](#-Pré-requisitos-para-rodar-o-projeto)
-   * [Clonando o projeto](#-Clonando-o-projeto)
-   * [Instalando o projeto](#-Instalando-o-projeto)
-   * [Rodando o projeto](#-Rodando-o-projeto)
-   * [Rodando os testes](#-Rodando-os-testes)
-   * [Documentação dos endpoints](#-Documentação-dos-endpoints)
+   * [Observações](#Observações)
+   * [Pré-requisitos para rodar o projeto](#Pré-requisitos-para-rodar-o-projeto)
+   * [Clonando o projeto](#Clonando-o-projeto)
+   * [Instalando o projeto](#Instalando-o-projeto)
+   * [Rodando o projeto](#Rodando-o-projeto)
+   * [Rodando os testes](#Rodando-os-testes)
+   * [Documentação dos endpoints](#Documentação-dos-endpoints)
 <!--te-->
 
 ## Endpoints
