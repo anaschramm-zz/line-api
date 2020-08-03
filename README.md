@@ -1,4 +1,8 @@
-# API - RPC - Gerenciamento de fila pessoas
+
+
+<h1 align="center">
+     :computer: API - RPC - Gerenciamento de fila pessoas
+</h1>
 
 Criação de uma API-RPC para o gerenciamento de uma fila de pessoas. O projeto foi feito em nodeJs e os dados foram salvos em um arquivo JSON.
 
@@ -10,26 +14,22 @@ Esse projeto apresenta os seguintes endpoints:
 `/showLine` - Lista os usuários da fila e suas respectivas posições;</br>
 `/filterLine` - Lista os usuários filtrados a partir do gênero;</br>
 `/popLine` - Tira a pessoa na primeira posição da fila;</br>
+</h3>
 
-## Índice:
-1. Endpoints
-    1.1: Cadastrar usuário
-    1.2: Adicionar a fila
-    1.3: Buscar usuário na fila
-    1.4: Ver fila
-    1.5: Filtrar fila
-    1.6: Tirar da fila
-2. Observações
-    2.1 - Validações
-3. Pré-requisitos para rodar o projeto
-    3.1 Node
-4. Clonando o projeto
-5. Instalando o projeto
-6. Rodando o projeto
-7. Rodando os testes
-8. Documentação dos endpoints
+Tabela de conteúdos
+=================
+<!--ts-->
+   * [Endpoints](#-Endpoints)
+   * [Observações](#-Observações)
+   * [Pré-requisitos para rodar o projeto](#-Pré-requisitos para rodar o projeto)
+   * [Clonando o projeto](#-Clonando o projeto)
+   * [Instalando o projeto](#-Instalando o projeto)
+   * [Rodando o projeto](#-Rodando o projeto)
+   * [Rodando os testes](#-Rodando os testes)
+   * [Documentação dos endpoints](#-Documentação dos endpoints)
+<!--te-->
 
-## Endpoints:
+## ⚙️ Endpoints
 
 ### Cadastrar usuário
 
@@ -55,7 +55,9 @@ Esse metódo recebe um gênero de usuário e retornar uma lista de usuários com
 
 Esse metódo retira da fila a pessoa na primeira posição e retorna-la.
 
-## Observações
+---
+
+## :pushpin: Observações
 
 ### Validações
 
@@ -65,7 +67,10 @@ Esse metódo retira da fila a pessoa na primeira posição e retorna-la.
 - Inserção de dois usuários iguais na fila (Verificação feita através do ID)
 - Testes unitários
 
-## Pré-requisitos para rodar o projeto
+---
+
+## 🚀 Pré-requisitos para rodar o projeto
+
 
 Para rodar o projeto, você precisará ter o Node.js instalado na sua máquina.
 
@@ -76,47 +81,56 @@ Tenha certeza também que tem o `git` disponível no seu PATH, você também pod
 
 - #### Instalação do Node no Ubuntu
     Você pode instalar facilmente o nodejs e o npm com um apt install, basta seguir os seguintes comandos.
+    ```bash
         $ sudo apt install nodejs
         $ sudo apt install npm
-
+    ```
 - #### Outros sistemas operacionais
     Você pode achar mais informações sobre a instalação no site oficial do Node.js (https://nodejs.org/) e no site oficial do NPM.
 
 Para verificar que a instalação foi feita com sucesso, você pode seguir os seguintes comandos.
 
+   ```bash
 $ node --version
 v12.14.1
 
 $ npm --version
 6.13.4
-
+  ```
+  ---
 ## Clonando o projeto
 
 Para clonar o projeto, basta criar uma pasta no seu computador, acessá-la pelo terminal e utilizar o seguinte comando.
-
+   ```bash
 $ git clone git@github.com:anaschramm/cubos-clinic-api.git
-
+  ```
+  ---
 ## Instalando o projeto
 
 Para instalar o projeto na sua máquina, basta instalar todas as dependências presentes no arquivo `package.json` usando o seguinte comando no seu terminal.
-
+  ```bash
 $ npm install
-
+  ```
+  ---
 ## Rodando o projeto
 
 Para rodar o projeto, basta utilizar o seguinte comando.
-
+  ```bash
 $ npm start
-
+  ```
+  ---
 ## Rodando os testes
 
 Para rodar os testes, basta utilizar o seguinte comando.
-
+ ```bash
 $ npm test
-
+  ```
+  ---
 ## Documentação dos endpoints
 
 Link para acessar o postman:
 
 Documentação da collection:
+
+
 
