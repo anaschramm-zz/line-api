@@ -1,8 +1,5 @@
+#   :computer: API - RPC - Gerenciamento de fila pessoas
 
-
-<h1 align="center">
-     :computer: API - RPC - Gerenciamento de fila pessoas
-</h1>
 
 Criação de uma API-RPC para o gerenciamento de uma fila de pessoas. O projeto foi feito em nodeJs e os dados foram salvos em um arquivo JSON.
 
@@ -19,8 +16,7 @@ Esse projeto apresenta os seguintes endpoints:
 Tabela de conteúdos
 =================
 <!--ts-->
- <a href="#-Endpoints">Endpoints</a>
-   * [Endpoints](#-Endpoints)
+   * [Endpoints](#Endpoints)
    * [Observações](#-Observações)
    * [Pré-requisitos para rodar o projeto](#-Pré-requisitos-para-rodar-o-projeto)
    * [Clonando o projeto](#-Clonando-o-projeto)
