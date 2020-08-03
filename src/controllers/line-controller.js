@@ -11,9 +11,10 @@ const filePathLine = "src/data/line.json";
 
 exports.createUser = async (req, res) => {
     try {
+        console.log(filePathUsers);
         const users = JSON.parse(await readFileAsync(filePathUsers, "utf8"));
         const data = {
-            "id": uuidv4(),
+            "id": req.body.id ? req.body.id : uuidv4(),
             "name": req.body.name,
             "email": checkExistsUser("email", users, validateEmail(req.body.email)),
             "gender": req.body.gender
@@ -35,10 +36,11 @@ exports.addToLine = async (req, res) => {
             line.push(searchLine);
             await writeFileAsync(filePathLine, JSON.stringify(line));
             res.status(201).send((line.findIndex(user => user.id == req.body.id) + 1).toString());
+        } else {
+            res.status(400).send({ message: "User not found" });
         }
-        res.status(400).send({ message: "User not found" });
     } catch (error) {
-        res.status(400).send({ message: error.message });
+        res.status(500).send({ message: error.message });
     }
 }
 
@@ -47,13 +49,14 @@ exports.findPosition = async (req, res) => {
         const lineUsers = [];
         const users = JSON.parse(await readFileAsync(filePathLine, "utf8"));
         for (const data of users) {
-            lineUsers.push(data);
+            await lineUsers.push(data);
         }
         const searchLine = lineUsers.findIndex(user => user.email == validateEmail(req.body.email));
         if (searchLine !== -1) {
             res.status(201).send((searchLine + 1).toString());
+        } else {
+            res.status(400).send({ message: "Email not found" });
         }
-        res.status(400).send({ message: "Email not found" });
     } catch (error) {
         res.status(400).send({ message: error.message });
     }
@@ -63,17 +66,21 @@ exports.showLine = async (req, res) => {
     try {
         const lineUsers = [];
         const users = JSON.parse(await readFileAsync(filePathLine, "utf8"));
-        for (var i = 0; i < users.length; i++) {
-            delete users[i].id;
-            const position = {
-                ...users[i],
-                "position": i + 1
+        if (users.length > 0) {
+            for (var i = 0; i < users.length; i++) {
+                delete users[i].id;
+                const position = {
+                    ...users[i],
+                    "position": i + 1
+                }
+                lineUsers.push(position);
             }
-            lineUsers.push(position);
+            res.status(201).send(lineUsers);
+        } else {
+            res.status(400).send({ message: "Line is empty" });
         }
-        res.status(201).send(lineUsers);
     } catch (error) {
-        res.status(400).send({ message: error.message });
+        res.status(500).send({ message: error.message });
     }
 }
 
@@ -92,9 +99,13 @@ exports.filterLine = async (req, res) => {
         const filterGender = lineUsers.filter((user) => {
             return user.gender == req.body.gender;
         })
-        res.status(201).send(filterGender);
+        if (filterGender.length > 0) {
+            res.status(201).send(filterGender);
+        } else {
+            res.status(400).send({ message: "Gender not found" });
+        }
     } catch (error) {
-        res.status(400).send({ message: error.message });
+        res.status(500).send({ message: error.message });
     }
 }
 
@@ -106,10 +117,11 @@ exports.popLine = async (req, res) => {
             users.shift();
             await writeFileAsync(filePathLine, JSON.stringify(users));
             res.status(201).send(removedUser);
+        } else {
+            res.status(400).send({ message: "Line is empty" });
         }
-        res.status(400).send({ message: "Line is empty" });
     } catch (error) {
-        res.status(400).send({ message: error.message });
+        res.status(500).send({ message: error.message });
     }
 }
 
