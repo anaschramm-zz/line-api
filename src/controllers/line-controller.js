@@ -11,19 +11,18 @@ const filePathLine = "src/data/line.json";
 
 exports.createUser = async (req, res) => {
     try {
-        console.log(filePathUsers);
         const users = JSON.parse(await readFileAsync(filePathUsers, "utf8"));
         const data = {
             "id": req.body.id ? req.body.id : uuidv4(),
-            "name": req.body.name,
+            "name": validateRequiredParameters(req.body.name, "name"),
             "email": checkExistsUser("email", users, validateEmail(req.body.email)),
-            "gender": req.body.gender
+            "gender": validateRequiredParameters(req.body.gender, "gender")
         }
         users.push(data);
         await writeFileAsync(filePathUsers, JSON.stringify(users));
         res.status(201).send(data);
     } catch (error) {
-        res.status(400).send({ message: error.message });
+        res.status(500).send({ message: error.message });
     }
 }
 
@@ -58,7 +57,7 @@ exports.findPosition = async (req, res) => {
             res.status(400).send({ message: "Email not found" });
         }
     } catch (error) {
-        res.status(400).send({ message: error.message });
+        res.status(500).send({ message: error.message });
     }
 }
 
@@ -97,7 +96,7 @@ exports.filterLine = async (req, res) => {
             lineUsers.push(position);
         }
         const filterGender = lineUsers.filter((user) => {
-            return user.gender == req.body.gender;
+            return user.gender == validateRequiredParameters(req.body.gender, "gender");
         })
         if (filterGender.length > 0) {
             res.status(201).send(filterGender);
@@ -126,7 +125,8 @@ exports.popLine = async (req, res) => {
 }
 
 function checkExistsUser(type, user, parameter) {
-    const checkUser = user.find(user => user[type] == parameter)
+    validateRequiredParameters(parameter, type);
+    const checkUser = user.find(user => user[type] == parameter);
     if (checkUser) {
         throw new Error("User already exists");
     }
@@ -134,8 +134,15 @@ function checkExistsUser(type, user, parameter) {
 }
 
 function validateEmail(email) {
-    if (!validate(email)) {
+    if (!validate(validateRequiredParameters(email, "email"))) {
         throw new Error("Invalid Email");
     }
     return email;
+}
+
+function validateRequiredParameters(parameter, type) {
+    if(!parameter) {
+        throw new Error(`${type} is required`);
+    }
+    return parameter;
 }

@@ -1,8 +1,8 @@
 {
-  "name": "cubos-api",
+  "name": "api.rpc.line",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Criação de uma API-RPC para o gerenciamento de uma fila de pessoas. O projeto foi feito em nodeJs e os dados foram salvos em um arquivo JSON.",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "node src/server.js"
