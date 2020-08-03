@@ -7,7 +7,7 @@ Esse projeto apresenta os seguintes endpoints:
 - `/addToLine` - Coloca um usuário na última posição da fila;
 - `/findPosition` - Retorna a posição de um usuário a partir de seu email;
 - `/showLine` - Lista os usuários da fila e suas respectivas posições;
-- `/filterLine` - Lista os usuários filtrados a partir de um parâmetro;
+- `/filterLine` - Lista os usuários filtrados a partir do gênero;
 - `/popLine` - Tira a pessoa na primeira posição da fila;
 
 
@@ -41,10 +41,10 @@ Esse metódo retira da fila a pessoa na primeira posição e retorna-la.
 
 ### Validações
 
+- Não foi feita a validação do gênero, para que a pessoa se sinta livre para se identificar como quiser ao inserir os dados.
 - Inserção de email inválido (Sem a estrutura ana@email.algo)
 - Inserção de dois usuários iguais no cadastro (Verificação feita através do email)
 - Inserção de dois usuários iguais na fila (Verificação feita através do ID)
-- Não foi feita a validação do gênero para que a pessoa se sinta livre para se identificar como quiser ao inserir os dados.
 - Testes unitários
 
 ## Pré-requisitos para rodar o projeto
