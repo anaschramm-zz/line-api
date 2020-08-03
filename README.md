@@ -56,11 +56,12 @@ Esse metódo retira da fila a pessoa na primeira posição e retorna-la.
 
 ### Validações
 
-- Não foi feita a validação do gênero, para que a pessoa se sinta livre para se identificar como quiser ao inserir os dados.
-- Inserção de email inválido (Sem a estrutura ana@email.algo)
-- Inserção de dois usuários iguais no cadastro (Verificação feita através do email)
-- Inserção de dois usuários iguais na fila (Verificação feita através do ID)
-- Testes unitários
+- Não foi feita a validação do gênero, para que a pessoa se sinta livre para se identificar como quiser ao inserir os dados;
+- Inserção de email inválido (Sem a estrutura ana@email.algo);
+- Inserção de dois usuários iguais no cadastro (Verificação feita através do email);
+- Inserção de dois usuários iguais na fila (Verificação feita através do ID);
+- Verifica se os campos obrigatórios foram preenchidos;
+- Testes unitários.
 
 ## Pré-requisitos para rodar o projeto
 
@@ -116,7 +117,11 @@ $ npm test
 
 Link para acessar o postman:
 
+https://tinyurl.com/y6md7wdj
+
 Documentação da collection:
+
+https://tinyurl.com/y2weduwl
 
 
 

@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "574b084e-c335-41b2-8b99-56593cff7fa6",
+		"name": "Doc API - Line",
+		"description": "<h1>Documentação da Doc API - Line</h1>\r\n\r\n<h2>Status:</h2>\r\n\r\n**201 – CREATED**\r\n\r\nIndica que a requisição foi bem sucedida\r\n\r\n**400 – BAD_REQUEST**\r\n\r\nIndica o servidor não conseguiu entender sua requisição, pois existe uma sintaxe ou estrutura inválida.\r\n\r\n**500 – INTERNAL_ERROR**\r\n\r\nIndica que o servidor encontrou um cenário inesperado de erro.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Janna\",\r\n    \"email\": \"janna@email.com\",\r\n    \"gender\": \"F\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createUser"
+					]
+				},
+				"description": "Cadastra usuário."
+			},
+			"response": []
+		},
+		{
+			"name": "addToLine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"digite_o_id\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addToLine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addToLine"
+					]
+				},
+				"description": "Coloca um usuário na última posição da fila."
+			},
+			"response": []
+		},
+		{
+			"name": "findPosition",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"janna@email.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/findPosition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"findPosition"
+					]
+				},
+				"description": "Retorna a posição de um usuário a partir de seu email."
+			},
+			"response": []
+		},
+		{
+			"name": "showLine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/showLine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"showLine"
+					]
+				},
+				"description": "Lista os usuários da fila e suas respectivas posições."
+			},
+			"response": []
+		},
+		{
+			"name": "filterLine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"gender\": \"F\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/filterLine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"filterLine"
+					]
+				},
+				"description": "Lista os usuários filtrados a partir do gênero."
+			},
+			"response": []
+		},
+		{
+			"name": "popLine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/popLine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"popLine"
+					]
+				},
+				"description": "Tira a pessoa na primeira posição da fila;"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "213616b2-776b-4e0c-ab3e-36f38ebf5733",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "11ebb83b-bd03-4255-ac50-d8537473218c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
