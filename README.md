@@ -19,6 +19,7 @@ Esse projeto apresenta os seguintes endpoints:
 Tabela de conteúdos
 =================
 <!--ts-->
+ <a href="#-Endpoints">Endpoints</a>
    * [Endpoints](#-Endpoints)
    * [Observações](#-Observações)
    * [Pré-requisitos para rodar o projeto](#-Pré-requisitos-para-rodar-o-projeto)
